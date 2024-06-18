@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,9 +9,76 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  height: 100vh;
+  background-color: #121212;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.chip-default {
+  @apply
+  max-w-full
+  text-xs
+  inline-flex
+  items-center
+  justify-center
+  rounded-16
+  whitespace-nowrap
+  transition-bg-box-shadow
+  duration-300
+  ease-cubic
+  outline-none
+  no-underline
+  border-[1px]
+  border-solid
+  px-1
+  align-middle
+  box-border;
+}
+
+.chip-text {
+  @apply overflow-hidden text-ellipsis px-3 whitespace-nowrap;
+}
+
+.chip-small-wrapper {
+  @apply h-[26px]
+}
+
+.chip-medium-wrapper {
+  @apply h-[32px]
+}
+
+.chip-large-wrapper {
+  @apply h-[36px]
+}
+
+.chip-small-span {
+  @apply text-[16px]
+}
+
+.chip-medium-span {
+  @apply text-[22px]
+}
+
+.chip-large-span {
+  @apply text-[24px]
+}
+
+.chip-delete {
+  @apply px-2 cursor-pointer rounded-full hover:opacity-65 active:opacity-65 focus:opacity-65;
+}
+
+.chip-small-delete {
+  @apply text-[14px]
+}
+
+.chip-medium-delete {
+  @apply text-[20px]
+}
+
+.chip-large-delete {
+  @apply text-[22px]
 }
